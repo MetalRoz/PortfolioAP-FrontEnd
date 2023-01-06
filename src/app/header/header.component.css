@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.redes {
+font-family: 'DM Sans', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+color: #FFFFFF;
+}
+
+.redes:hover {
+    border: 1px solid #47D16E;
+}

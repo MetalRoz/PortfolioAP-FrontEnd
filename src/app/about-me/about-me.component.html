@@ -1,0 +1,15 @@
+<div class="container" *ngFor="let persona of sobremi">
+    <div class="imagen">
+        <img src="{{persona.urlimagen}}" class="img-thumbnail" alt="...">
+    </div>
+    <div>
+        <app-edit-aboutme [person]="persona" (closeediting)="isediting = false" *ngIf="isediting"></app-edit-aboutme>
+    <div class="sobremi" *ngIf="!isediting">
+        <i class="fas fa-edit" (click)="isediting = true" *ngIf="isLogged" ></i>
+        <h1>Soy <span>{{persona.nombre}}</span></h1>
+        <h3>{{persona.ocupacion}}</h3>
+        <p>{{persona.descripcion}}</p>
+        <a href="#proyectos"><button type="button" class="btn btn-success">Ver Proyectos</button></a>
+    </div>
+</div>
+</div>

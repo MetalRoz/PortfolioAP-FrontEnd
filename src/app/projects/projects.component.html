@@ -1,0 +1,26 @@
+<div class="titulo">
+  <h1 id="proyectos">PROYECTOS</h1>
+</div>
+
+<button type="button" class="btn btn-danger agregar" routerLink="/agregar-proyecto" *ngIf="isLogged">Añadir Proyecto</button>
+
+<div class="tarjetas">
+  <div class="card text-center" style="width: 18rem;" *ngFor="let proyectos of proyecto">
+    <div>
+      <app-editar-proyecto [projects]="proyectos" (closeediting)="isediting = false" *ngIf="isediting"></app-editar-proyecto>
+      <div *ngIf="!isediting">
+      <div>
+      <i class="fa-solid fa-pen-to-square" (click)="isediting = true" *ngIf="isLogged"></i>
+      <i class="fa-solid fa-trash" (click)="borrar(proyectos.id)" *ngIf="isLogged"></i></div>
+      <div class="card" style="width: 18rem;">
+          <img src="{{proyectos.urlimagen}}" class="card-img-top" alt="...">
+      </div>        
+      <div class="card-body">
+        <h5 class="card-title">{{proyectos.nombre}}</h5>
+        <p class="card-text">{{proyectos.descripcion}}</p>
+        <a href="{{proyectos.urlproyecto}}" class="btn btn-success">Ver Demo</a>
+      </div>
+    </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container" *ngIf="isLogged">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="urlimagen">URL de la imagen</label>
+                    <input type="text" class="form-control" id="urlimagen" name="urlimagen"
+                    [(ngModel)]="urlimagen" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                    [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea name="descripcion" id="descripcion" rows="5" [(ngModel)]="descripcion" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="progress" class="form-label">Barra de nivel de uso {{porcentaje}}%</label>
+                    <input type="range" class="form-range" min="0" max="100" id="progress" name="porcentaje"
+                    [(ngModel)]="porcentaje" required>
+                </div>
+                <a href="#habilidades"><button type="button" class="btn btn-outline-danger">Cancelar</button></a>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>

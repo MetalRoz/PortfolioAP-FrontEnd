@@ -1,0 +1,12 @@
+.form-group {
+    color: white;
+}
+
+textarea {
+    width: 358px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+}

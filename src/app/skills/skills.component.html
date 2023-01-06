@@ -1,0 +1,24 @@
+<div class="titulo">
+    <h1 id="habilidades">HABILIDADES</h1>
+</div>
+
+<button type="button" class="btn btn-danger" routerLink="/agregar-skill" *ngIf="isLogged">Añadir Habilidad</button>
+
+<div class="tarjetas">
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;" *ngFor="let habilidad of skill">
+  <div>
+    <app-editar-skill [skill]="habilidad" (closeediting)="isediting = false" *ngIf="isediting"></app-editar-skill>
+  <div class="card-header" *ngIf="!isediting">
+    <i class="fa-solid fa-pen-to-square" (click)="isediting = true" *ngIf="isLogged"></i>
+    <i class="fa-solid fa-trash" (click)="borrar(habilidad.id)" *ngIf="isLogged"></i>
+    <div class="card-body">
+      <h5 class="card-title"> <img src="{{habilidad.urlimagen}}" width="25px" height="25px" alt=""> {{habilidad.nombre}}</h5>
+      <p class="card-text">{{habilidad.descripcion}}</p>
+    </div>
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" aria-label="Example with label" [style.width]="habilidad.porcentaje + '%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{habilidad.porcentaje}}%</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

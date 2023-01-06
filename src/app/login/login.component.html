@@ -1,0 +1,20 @@
+<div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="alerta">
+    <strong>UPS</strong> El usuario o la contraseña son incorrectos.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<button type="button" class="btn btn-success m-3" routerLink="">Home</button>
+
+<div class="container">
+     <h1>Iniciar Sesión</h1>
+     <form>
+        <div class="user">
+            <i class="fa-solid fa-user icons"></i>
+            <input type="email" placeholder="Ingresa tu usuario" name="user" [(ngModel)]="usuario.user">
+        </div>
+        <div class="user">
+            <i class="fas fa-lock icons"></i>
+            <input type="password" placeholder="Ingresa tu contraseña" name="password" [(ngModel)]="usuario.password">
+        </div>
+        <button type="submit" class="btn btn-success boton" (click)="Login()" >Iniciar Sesión</button>
+     </form>
+</div>

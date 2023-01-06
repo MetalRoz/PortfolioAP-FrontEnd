@@ -1,0 +1,45 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    color: #47D16E;
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 200px;
+}
+
+.tarjetas {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 80px;
+}
+
+.card-header, .card-body, .card {
+    background-color: #1F1F21 !important;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 200px;
+}
+
+.fa-solid {
+    color: white;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+}
+
+button {
+    margin-left: 60px;
+}
+
+h5 {
+    color: #47D16E;
+}

@@ -1,0 +1,16 @@
+label {
+    color: white;
+}
+
+.container {
+    width: 600px;
+}
+
+textarea {
+    width: 575px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+}

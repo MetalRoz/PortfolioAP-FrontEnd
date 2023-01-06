@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    color: white;
+    width: 30vw;
+    height: 50vh;
+    margin-top: 50px;
+    border: 1px solid #1cff7b;
+}
+
+.user, .icons, .boton {
+    margin-top: 20px;
+}
+
+.icons {
+    color: white;
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+}

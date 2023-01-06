@@ -1,0 +1,29 @@
+<div class="container" *ngIf="isLogged">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="urlimagen">URL de la imagen del proyecto</label>
+                    <input type="text" class="form-control" id="urlimagen" name="urlimagen"
+                    [(ngModel)]="urlimagen" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre del proyecto</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                    [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion del proyecto</label>
+                    <textarea name="descripcion" id="descripcion" rows="5" [(ngModel)]="descripcion" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="urlproyecto">URL del demo del proyecto</label>
+                    <input type="text" class="form-control" id="urlproyecto" name="urlproyecto"
+                    [(ngModel)]="urlproyecto" required>
+                </div>
+                <a href="#proyectos"><button type="button" class="btn btn-outline-danger">Cancelar</button></a>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>

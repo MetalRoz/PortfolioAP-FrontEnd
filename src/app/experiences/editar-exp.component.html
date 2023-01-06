@@ -1,0 +1,19 @@
+<div class="container" *ngIf="isLogged">
+    <div class="row">
+        <div class="col">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo"
+                    [(ngModel)]="experience.titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea name="descripcion" id="descripcion" rows="5" [(ngModel)]="experience.descripcion" required></textarea>
+                </div>
+                <button type="button" class="btn btn-outline-danger" (click)="closeediting.emit(false)" >Cancelar</button>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
