@@ -15,8 +15,9 @@ font-weight: 500;
 font-size: 16px;
 line-height: 16px;
 color: #FFFFFF;
+text-decoration: underline transparent;
 }
 
 .redes:hover {
-    border: 1px solid #47D16E;
+    text-decoration: underline #47D16E;
 }

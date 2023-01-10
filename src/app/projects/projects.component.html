@@ -12,13 +12,13 @@
       <div>
       <i class="fa-solid fa-pen-to-square" (click)="isediting = true" *ngIf="isLogged"></i>
       <i class="fa-solid fa-trash" (click)="borrar(proyectos.id)" *ngIf="isLogged"></i></div>
-      <div class="card" style="width: 18rem;">
+      <div class="card">
           <img src="{{proyectos.urlimagen}}" class="card-img-top" alt="...">
       </div>        
       <div class="card-body">
         <h5 class="card-title">{{proyectos.nombre}}</h5>
         <p class="card-text">{{proyectos.descripcion}}</p>
-        <a href="{{proyectos.urlproyecto}}" class="btn btn-success">Ver Demo</a>
+        <a href="{{proyectos.urlproyecto}}" target="_blank" class="btn btn-success">Ver Demo</a>
       </div>
     </div>
 </div>

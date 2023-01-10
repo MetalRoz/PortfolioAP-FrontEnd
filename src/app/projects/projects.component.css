@@ -11,6 +11,14 @@
     padding-top: 200px;
 }
 
+.card img {
+    border-radius: 10px;
+}
+
+.text-center{
+    margin-bottom: 12px;
+}
+
 .tarjetas {
     display: flex;
     text-align: center;
