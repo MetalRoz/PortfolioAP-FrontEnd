@@ -4,6 +4,19 @@
     align-items: center;
 }
 
+.dropdown-menu {
+    background: #47D16E;
+}
+
+.dropdown-menu a {
+    color: white;
+    font-weight: 600;
+}
+
+.dropdown-menu a:hover {
+    background: #2cb753;
+}
+
 .sobremi h1, h3{
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
@@ -37,7 +50,7 @@ img {
     border-radius: 50%;
 }
 
-button {
+.boton button {
     position: relative;
     left: 40%;
 }

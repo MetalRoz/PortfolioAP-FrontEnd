@@ -4,12 +4,24 @@
     </div>
     <div>
         <app-edit-aboutme [person]="persona" (closeediting)="isediting = false" *ngIf="isediting"></app-edit-aboutme>
-    <div class="sobremi" *ngIf="!isediting">
-        <i class="fas fa-edit" (click)="isediting = true" *ngIf="isLogged" ></i>
-        <h1>Soy <span>{{persona.nombre}}</span></h1>
-        <h3>{{persona.ocupacion}}</h3>
-        <p>{{persona.descripcion}}</p>
-        <a href="#proyectos"><button type="button" class="btn btn-success">Ver Proyectos</button></a>
+        <div class="sobremi" *ngIf="!isediting">
+            <i class="fas fa-edit" (click)="isediting = true" *ngIf="isLogged"></i>
+            <h1>Soy <span>{{persona.nombre}}</span></h1>
+            <h3>{{persona.ocupacion}}</h3>
+            <p>{{persona.descripcion}}</p>
+            <!-- Boton Desplegable-->
+            <div class="btn-group boton">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Ver
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#experiencias">Experiencias</a></li>
+                    <li><a class="dropdown-item" href="#educaciones">Educaciones</a></li>
+                    <li><a class="dropdown-item" href="#habilidades">Habilidades</a></li>
+                    <li><a class="dropdown-item" href="#proyectos">Proyectos</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 </div>
