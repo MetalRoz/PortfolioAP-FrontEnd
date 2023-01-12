@@ -4,6 +4,13 @@
     align-items: center;
 }
 
+.sobremi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .dropdown-menu {
     background: #47D16E;
 }
@@ -48,11 +55,6 @@
 
 img {
     border-radius: 50%;
-}
-
-.boton button {
-    position: relative;
-    left: 40%;
 }
 
 .fas {
