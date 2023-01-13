@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AgregarEducationComponent {
 
   titulo = '';
+  fecha = '';
   institucion = '';
   descripcion = '';
   public isLogged = false;
@@ -27,7 +28,7 @@ export class AgregarEducationComponent {
   }
   
   onCreate(): void {
-    const education = new Education(this.titulo, this.institucion, this.descripcion);
+    const education = new Education(this.titulo, this.fecha, this.institucion, this.descripcion);
     this.educationService.save(education).subscribe(
       data => {
         this.toastr.success('Educación Creada', 'OK', {

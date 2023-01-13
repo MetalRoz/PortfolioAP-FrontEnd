@@ -11,8 +11,12 @@
   <div class="card-header" *ngIf="!isediting">
     <i class="fa-solid fa-pen-to-square" (click)="isediting = true" *ngIf="isLogged"></i>
     <i class="fa-solid fa-trash" (click)="borrar(experiencia.id)" *ngIf="isLogged"></i>
+    <div class="card">
+      <img src="{{experiencia.urlimagen}}" class="card-img-top" alt="...">
+    </div>    
     <div class="card-body">
       <h5 class="card-title">{{experiencia.titulo}}</h5>
+      <p class="card-text">{{experiencia.fecha}}</p>
       <p class="card-text">{{experiencia.descripcion}}</p>
     </div>
   </div>

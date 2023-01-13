@@ -3,9 +3,19 @@
         <div class="col">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
+                    <label for="urlimagen">URL de la imagen</label>
+                    <input type="text" class="form-control" id="urlimagen" name="urlimagen"
+                    [(ngModel)]="experience.urlimagen" required>
+                </div>
+                <div class="form-group">
                     <label for="titulo">Titulo</label>
                     <input type="text" class="form-control" id="titulo" name="titulo"
                     [(ngModel)]="experience.titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <input type="text" class="form-control" id="fecha" name="fecha"
+                    [(ngModel)]="experience.fecha" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>

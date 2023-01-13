@@ -12,7 +12,9 @@ import { Router } from '@angular/router';
 })
 export class AgregarExpComponent {
 
+urlimagen = '';
 titulo = '';
+fecha = '';
 descripcion = '';
 public isLogged = false;
 
@@ -27,7 +29,7 @@ ngOnInit() {
 }
 
 onCreate(): void {
-  const experiencia = new Experiencia(this.titulo, this.descripcion);
+  const experiencia = new Experiencia(this.urlimagen, this.titulo, this.fecha, this.descripcion);
   this.experienciaService.save(experiencia).subscribe(
     data => {
       this.toastr.success('Experiencia Creado', 'OK', {
