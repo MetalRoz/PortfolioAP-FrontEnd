@@ -8,7 +8,7 @@ import { Proyectos } from '../models/proyectos';
 })
 export class ProyectosService {
 
-  proyectosURL = 'https://spotless-ants-production.up.railway.app/proyectos/';
+  proyectosURL = 'https://new-crook-production.up.railway.app/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 
