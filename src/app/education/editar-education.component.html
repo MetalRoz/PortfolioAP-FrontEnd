@@ -3,6 +3,11 @@
         <div class="col">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
+                    <label for="urlimagen">URL del logo</label>
+                    <input type="text" class="form-control" id="urlimagen" name="urlimagen"
+                    [(ngModel)]="education.urlimagen" required>
+                </div>
+                <div class="form-group">
                     <label for="titulo">Titulo</label>
                     <input type="text" class="form-control" id="titulo" name="titulo"
                     [(ngModel)]="education.titulo" required>
